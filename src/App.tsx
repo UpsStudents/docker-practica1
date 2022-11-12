@@ -16,18 +16,19 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <h3>Nombres:</h3>
+        <ul>
+          <li>Antonio Insuasti</li>
+          <li>Nicolas Cisneros</li>
+        </ul>
+        <h3>Fecha:</h3>
+        <p>{new Date().toLocaleString()}</p>
+        <h3>Módulo:</h3>
+        <p>INTEGRACIÓN Y ENTREGA CONTINUA (DEVOPS)</p>
         <h1>Lista de Pokemon en React - Uso de <a href="https://pokeapi.co">Pokemon API</a></h1>
         <img src={logo} className="App-logo" alt="logo" />
         {pokemons.map((poke, index) => <Pokemon {...poke} key={`${index} ${poke.name}`} />)}
-        <h3>Nombres:</h3>
-        <li>
-          <ul>Antonio Insuasti</ul>
-          <ul>Nicolas Cisneros</ul>
-        </li>
-        <h3>Fecha:</h3>
-        <p>{Date.now().toLocaleString()}</p>
-        <h3>Módulo:</h3>
-        <p>INTEGRACIÓN Y ENTREGA CONTINUA (DEVOPS)</p>
+        
       </header>
     </div>
   );
